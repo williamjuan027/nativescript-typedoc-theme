@@ -1,8 +1,8 @@
 {
-  "name": "tns-core-modules-api-ref",
+  "name": "nativescript-typedoc-theme",
   "version": "0.0.1",
-  "description": "'NativeScript Core Modules Api Reference generator'",
-  "main": "index.js",
+  "description": "A TypeDoc theme for the API-Reference of the NativeScript Cross-Platform Modules",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +14,8 @@
     "NativeScript",
     "tns-core-modules",
     "api-ref",
-    "typedoc"
+    "typedoc",
+    "theme"
   ],
   "author": "Telerik <support@telerik.com>",
   "license": "Apache-2.0",
@@ -25,7 +26,6 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-debug": "^2.1.2",
-    "gulp-typedoc": "^2.0.0",
-    "typedoc": "^0.3.12"
+    "gulp-sass": "^2.3.1"
   }
 }

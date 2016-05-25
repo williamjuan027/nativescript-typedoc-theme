@@ -1,2 +1,6 @@
-# tns-core-modules-API-Ref
-A TypeDoc-based API-Reference generator for the NativeScript Core Modules
+# nativescript-typedoc-theme
+
+A [TypeDoc](https://github.com/TypeStrong/typedoc) theme for the
+[NativeScript Cross-Platform Modules](https://github.com/NativeScript/NativeScript)
+[API-Refefence](http://docs.nativescript.org/api-reference/globals.html).
+
