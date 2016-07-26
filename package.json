@@ -1,6 +1,6 @@
 {
   "name": "nativescript-typedoc-theme",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A TypeDoc theme for the API-Reference of the NativeScript Cross-Platform Modules",
   "main": "",
   "scripts": {
