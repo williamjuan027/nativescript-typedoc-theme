@@ -29,12 +29,21 @@
             @content
 
 .container
-    max-width: 1200px
+    max-width: 1720px
     margin: 0 auto
+    box-sizing: border-box
     padding: 0 40px
 
     +size-xs
         padding: 0 20px
+
+@media (max-width: 1720px)
+    .container
+        max-width: 1280px
+
+@media (max-width: 1280px)
+    .container
+        max-width: 1010px
 
 .container-main
     padding-bottom: 200px
