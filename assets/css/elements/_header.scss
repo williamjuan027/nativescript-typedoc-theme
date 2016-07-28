@@ -16,7 +16,7 @@
     }
 
     .ns-logo:before {
-        font-size: 56px;
+        font-size: 55px;
         width: .8em;
         height: .8em;
         display: inline-block;
@@ -78,7 +78,6 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
-        background-color: #0c121c;
 
         > li {
             position: relative;
@@ -86,8 +85,10 @@
 
         li > a {
             display: inline-block;
-            padding: 30px 20px;
+            padding: 28px 18px;
+
             font-size: 17px;
+            line-height: 1.45;
             transition: 0.2s background ease-in-out;
             box-sizing: border-box;
             width: 100%;
@@ -163,7 +164,7 @@
 
     @media (min-width: 1721px) {
         ul > li > a {
-            padding: 40px 20px;
+            padding: 36px 20px;
             font-size: 23px;
         }
 
@@ -177,9 +178,14 @@
     }
 
     @media (max-width: 1280px) {
+        ul {
+            margin-left: -10px;
+        }
+
         ul > li > a {
-            padding: 20px;
-            font-size: 15px
+            padding: 20px 9px;
+            font-size: 15px;
+            line-height: normal;
         }
 
         .ns-btn-git {

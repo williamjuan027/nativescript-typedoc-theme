@@ -1,9 +1,13 @@
 .ns-btn {
     display: inline-flex;
+     width: 230px;
+    line-height: 56px;
+    height: 60px;
     box-sizing: border-box;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    white-space: nowrap;
     text-transform: uppercase;
     font-weight: 300;
     font-family: 'Dual-600';
@@ -17,8 +21,36 @@
     }
 
     &.ns-icon:before {
-        margin-right: 8px;
+        margin-right: 9px;
         font-size: 1.4em;
+        line-height: 1.56;
     }
 }
 
+@media only screen and (max-width: 1720px) {
+    .ns-btn {
+        width: 214px;
+        height: 50px;
+        font-size: 17px;
+
+        &.ns-icon:before {
+            line-height: inherit;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .ns-btn {
+        width: 194px;
+        height: 36px;
+        &.ns-icon:before {
+            line-height: inherit;
+        }
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .ns-btn.ns-icon:before {
+        margin-right: 2px;
+    }
+}
