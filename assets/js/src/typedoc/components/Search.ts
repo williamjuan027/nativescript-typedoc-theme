@@ -123,7 +123,7 @@ module typedoc.search
             $.get($el.attr('data-index'))
                 .done((source:string) => {
                     eval(source);
-                    createIndex();
+                    createIndex();                    
                 }).fail(() => {
                     setLoadingState(SearchLoadingState.Failure);
                 });
@@ -223,38 +223,37 @@ module typedoc.search
         }
     }
 
-
     /**
      * Bind all required events on the input field.
      */
-    $field.on('focusin', () => {
-        setHasFocus(true);
-        loadIndex();
-    }).on('focusout', () => {
-        setTimeout(() => setHasFocus(false), 100);
-    }).on('input', () => {
-        setQuery($.trim($field.val()));
-    }).on('keydown', (e:JQueryKeyEventObject) => {
-        if (e.keyCode == 13 || e.keyCode == 27 || e.keyCode == 38 || e.keyCode == 40) {
-            preventPress = true;
-            e.preventDefault();
+    function bindEvents() {
+        $field.on('focusin', () => {
+            setHasFocus(true);        
+        }).on('focusout', () => {
+            setTimeout(() => setHasFocus(false), 100);
+        }).on('input', () => {
+            setQuery($.trim($field.val()));
+        }).on('keydown', (e:JQueryKeyEventObject) => {
+            if (e.keyCode == 13 || e.keyCode == 27 || e.keyCode == 38 || e.keyCode == 40) {
+                preventPress = true;
+                e.preventDefault();
 
-            if (e.keyCode == 13) {
-                gotoCurrentResult();
-            } else if (e.keyCode == 27) {
-                $field.blur();
-            } else if (e.keyCode == 38) {
-                setCurrentResult(-1);
-            } else if (e.keyCode == 40) {
-                setCurrentResult(1);
+                if (e.keyCode == 13) {
+                    gotoCurrentResult();
+                } else if (e.keyCode == 27) {
+                    $field.blur();
+                } else if (e.keyCode == 38) {
+                    setCurrentResult(-1);
+                } else if (e.keyCode == 40) {
+                    setCurrentResult(1);
+                }
+            } else {
+                preventPress = false;
             }
-        } else {
-            preventPress = false;
-        }
-    }).on('keypress', (e) => {
-        if (preventPress) e.preventDefault();
-    });
-
+        }).on('keypress', (e) => {
+            if (preventPress) e.preventDefault();
+        })
+    }
 
     /**
      * Start searching by pressing a key on the body.
@@ -264,5 +263,10 @@ module typedoc.search
         if (!hasFocus && e.keyCode > 47 && e.keyCode < 112) {
             $field.focus();
         }
+    });
+
+    $('document').ready(function(){        
+        loadIndex();
+        setTimeout(() => bindEvents(), 2000);
     });
 }
