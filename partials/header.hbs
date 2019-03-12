@@ -11,33 +11,23 @@
             <div class="col-9 center-col" id="main-nav">
                 <ul>
                     <li>
-                        <a href="/start/introduction">
-                            NativeScript Core
+                        <a href="//docs.nativescript.org/" id="api-ref-btn">
+                            NativeScript Docs
                         </a>
                     </li>
                     <li>
-                        <a href="/angular/start/introduction">
-                            NativeScript with Angular
+                        <a href="/api-reference/globals" id="api-ref-btn">
+                            Core Modules
                         </a>
                     </li>
                     <li>
-                        <a href="/vuejs">
-                            NativeScript with Vue.js
+                        <a href="/ng-api-reference/globals" id="ng-api-ref-btn">
+                            NativeScript Angular
                         </a>
                     </li>
                     <li>
-                        <a href="/api-reference/globals" class="selected">
-                            API Reference - Core Modules
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ns-ui-api-reference/globals">
-                            API Reference - NativeScript UI
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/sidekick">
-                            NativeScript Sidekick
+                        <a href="/ns-ui-api-reference/globals" id="ns-ui-api-ref-btn">
+                            NativeScript UI
                         </a>
                     </li>
                 </ul>
@@ -59,5 +49,13 @@
         mobileBtn.addEventListener('click', function(e) {
             menu.classList.toggle('active');
         }, false);
+        let siteURL  = window.location.href;
+        if(siteURL.indexOf('ng-api-reference') >= 0){
+            document.getElementById("ng-api-ref-btn").classList.add("selected");
+        } else if(siteURL.indexOf('ns-ui-api-reference') >= 0){
+            document.getElementById("ns-ui-api-ref-btn").classList.add("selected");
+        } else{
+            document.getElementById("api-ref-btn").classList.add("selected");
+        }
     };
 </script>
