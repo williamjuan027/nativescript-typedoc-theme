@@ -65,12 +65,12 @@
             menu.classList.toggle('active');
         }, false);
         let siteURL  = window.location.href;
-        if(siteURL.indexOf('api-reference') >= 0){
-            document.getElementById("api-ref-btn").classList.add("selected")
-        } else if(siteURL.indexOf('ng-api-reference') >= 0){
-            document.getElementById("ng-api-ref-btn").classList.add("selected")
+        if(siteURL.indexOf('ng-api-reference') >= 0){
+            document.getElementById("ng-api-ref-btn").classList.add("selected");
+        } else if(siteURL.indexOf('ns-ui-api-reference') >= 0){
+            document.getElementById("ns-ui-api-ref-btn").classList.add("selected");
         } else{
-            document.getElementById("ns-ui-api-ref-btn").classList.add("selected")
+            document.getElementById("api-ref-btn").classList.add("selected");
         }
     };
 </script>
