@@ -227,7 +227,6 @@ module typedoc.search
      * Bind all required events on the input field.
      */
     function bindEvents() {
-        alert("test")
         $field.on('focusin', () => {
             setHasFocus(true);        
         }).on('focusout', () => {
@@ -260,6 +259,7 @@ module typedoc.search
      * Start searching by pressing a key on the body.
      */
     $('body').on('keydown', (e:JQueryKeyEventObject) => {
+        alert("here")
         if (e.altKey || e.ctrlKey || e.metaKey) return;
         if (!hasFocus && e.keyCode > 47 && e.keyCode < 112) {
             $field.focus();
