@@ -227,6 +227,7 @@ module typedoc.search
      * Bind all required events on the input field.
      */
     function bindEvents() {
+        alert("test")
         $field.on('focusin', () => {
             setHasFocus(true);        
         }).on('focusout', () => {
@@ -267,6 +268,6 @@ module typedoc.search
 
     $('document').ready(function(){        
         loadIndex();
-        setTimeout(() => bindEvents(), 10000);
+        setTimeout(() => bindEvents(), 3000);
     });
 }
