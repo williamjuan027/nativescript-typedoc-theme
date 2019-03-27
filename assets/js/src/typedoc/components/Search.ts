@@ -267,6 +267,6 @@ module typedoc.search
 
     $('document').ready(function(){        
         loadIndex();
-        setTimeout(() => bindEvents(), 3000);
+        setTimeout(() => bindEvents(), 10000);
     });
 }
