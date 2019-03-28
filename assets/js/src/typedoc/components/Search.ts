@@ -252,6 +252,7 @@ module typedoc.search
             }
         }).on('keypress', (e) => {
             if (preventPress) e.preventDefault();
+            e.preventDefault();
         })
     }
 
