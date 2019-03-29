@@ -194,6 +194,7 @@ module typedoc.search
      * Move the highlight within the result set.
      */
     function setCurrentResult(dir:number) {
+        debugger
         var $current = $results.find('.current');
         if ($current.length == 0) {
             $results.find(dir == 1 ? 'li:first-child' : 'li:last-child').addClass('current');
@@ -211,7 +212,7 @@ module typedoc.search
      * Navigate to the highlighted result.
      */
     function gotoCurrentResult() {
-        debugger
+        
         var $current = $results.find('.current');
 
         if ($current.length == 0) {
