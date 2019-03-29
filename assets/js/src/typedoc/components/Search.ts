@@ -211,6 +211,7 @@ module typedoc.search
      * Navigate to the highlighted result.
      */
     function gotoCurrentResult() {
+        debugger
         var $current = $results.find('.current');
 
         if ($current.length == 0) {
@@ -227,7 +228,6 @@ module typedoc.search
      * Bind all required events on the input field.
      */
     function bindEvents() {
-        debugger
         $field.on('focusin', () => {
             setHasFocus(true);        
         }).on('focusout', () => {
