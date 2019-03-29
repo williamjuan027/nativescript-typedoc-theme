@@ -196,13 +196,15 @@ module typedoc.search
     function setCurrentResult(dir:number) {
         debugger
         var $current = $results.find('.current');
-        if ($current.length == 0) {
-            $results.find(dir == 1 ? 'li:first-child' : 'li:last-child').addClass('current');
-        } else {
-            var $rel = dir == 1 ? $current.next('li') : $current.prev('li');
-            if ($rel.length > 0) {
-                $current.removeClass('current');
-                $rel.addClass('current');
+        if($current){
+            if ($current.length == 0) {
+                $results.find(dir == 1 ? 'li:first-child' : 'li:last-child').addClass('current');
+            } else {
+                var $rel = dir == 1 ? $current.next('li') : $current.prev('li');
+                if ($rel.length > 0) {
+                    $current.removeClass('current');
+                    $rel.addClass('current');
+                }
             }
         }
     }
