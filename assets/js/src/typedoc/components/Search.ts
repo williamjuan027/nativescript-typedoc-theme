@@ -227,6 +227,7 @@ module typedoc.search
      * Bind all required events on the input field.
      */
     function bindEvents() {
+        debugger
         $field.on('focusin', () => {
             setHasFocus(true);        
         }).on('focusout', () => {
